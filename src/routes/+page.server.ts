@@ -12,7 +12,7 @@ export const actions = {
 			return fail(403, { body: '*' });
 		}
 
-		const addNewMessage = graphql`
+		const addNewMessage = graphql(`
 			mutation AddNewMessage($username: String!, $avatar: URL, $body: String!) {
 				messageCreate(input: { username: $username, avatar: $avatar, body: $body }) {
 					message {
@@ -20,7 +20,7 @@ export const actions = {
 					}
 				}
 			}
-		`;
+		`);
 		return await addNewMessage.mutate(
 			{ username: session?.user?.username ?? '', avatar: session?.user?.image, body },
 			{ event }
