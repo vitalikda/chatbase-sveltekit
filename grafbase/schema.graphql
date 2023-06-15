@@ -1,0 +1,13 @@
+schema
+	@auth(
+		providers: [{ type: jwt, issuer: "auth", secret: "{{ env.AUTH_SECRET }}" }]
+		rules: [{ allow: private }]
+	) {
+	query: Query
+}
+
+type Message @model {
+	username: String!
+	avatar: URL
+	body: String!
+}

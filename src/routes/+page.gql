@@ -1,0 +1,13 @@
+query GetRecentMessages($last: Int = 100) @live {
+	messageCollection(last: $last) {
+		edges {
+			node {
+				id
+				username
+				avatar
+				body
+				createdAt
+			}
+		}
+	}
+}
