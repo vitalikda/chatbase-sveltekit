@@ -1,5 +1,8 @@
 # Grafbase ⨯ SvelteKit X Houdini
 
+> [!WARNING] 
+> Grafbase has ceased support for SSE, which is causing the demo to malfunction
+
 ![Chatbase App](https://grafbase.com/images/guides/how-to-build-a-real-time-chat-app-with-nextjs-graphql-and-server-sent-events/cover.png)
 
 ## Build with
